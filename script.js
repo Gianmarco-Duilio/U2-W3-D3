@@ -23,38 +23,38 @@ const colonna = (book) => {
   contenitoreLibri.appendChild(colonna);
 
   const card = document.createElement("div");
-  card.classList.add("card");
+  card.classList.add("card", "bg-dark", "shadow", "p-3", "mb-5", "rounded-4", "h-100");
   colonna.appendChild(card);
 
   const immagine = document.createElement("img");
-  immagine.classList.add("card-img-top");
+  immagine.classList.add("card-img-top", "object-fit-cover");
   immagine.src = book.img;
   card.appendChild(immagine);
 
   //   console.log(immagine);
 
   const bodyCard = document.createElement("div");
-  bodyCard.classList.add("card-body");
+  bodyCard.classList.add("card-body", "text-center");
   card.appendChild(bodyCard);
 
   const title = document.createElement("h3");
-  title.classList.add("card-title");
+  title.classList.add("card-title", "text-white");
   title.innerText = book.title;
   //   console.log(title);
   bodyCard.appendChild(title);
 
   const price = document.createElement("p");
-  price.classList.add("card-text");
+  price.classList.add("card-text", "text-white");
   price.innerText = book.price + "£";
   bodyCard.appendChild(price);
   //   console.log(price);
 
   const buttonAdd = document.createElement("button");
-  buttonAdd.classList.add("btn", "btn-success", "m-2", "border-black");
+  buttonAdd.classList.add("btn", "btn-success", "m-2", "align-text-bottom");
   bodyCard.appendChild(buttonAdd);
   buttonAdd.innerText = "Add";
   const buttonRem = document.createElement("button");
-  buttonRem.classList.add("btn", "btn-danger", "m-2", "border-black");
+  buttonRem.classList.add("btn", "btn-danger", "m-2", "align-text-bottom");
   bodyCard.appendChild(buttonRem);
   buttonRem.innerText = "Remove";
   buttonRem.onclick = remove;
